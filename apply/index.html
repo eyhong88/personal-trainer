@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,27 +20,7 @@
                 </ul>
             </nav>
         </header>
-        <form name="contact" method="POST" data-netlify="true">
-            <p>
-              <label>Your Name: <input type="text" name="name" /></label>
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email" /></label>
-            </p>
-            <p>
-              <label>Your Role: <select name="role[]" multiple>
-                <option value="leader">Leader</option>
-                <option value="follower">Follower</option>
-              </select></label>
-            </p>
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
-        <!-- <form name="application" method="POST" data-netlify="true">
+        <form name="application" method="POST" data-netlify="true">
             
             <p>
                 <label for="name">Name:</label>
@@ -126,8 +106,31 @@
                 <button type="submit">Submit</button>
             </p>
             <p class="thank-you-message">Thank you for submitting your application!</p>
-        </form> -->
+        </form>
     </div>
     <script src="/scripts.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Form</title>
+</head>
+<body>
+    <form name="test-form" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="test-form">
+        <p>
+            <label>Name: <input type="text" name="name" required></label>
+        </p>
+        <p>
+            <label>Email: <input type="email" name="email" required></label>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
 </body>
 </html>
