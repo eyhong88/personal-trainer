@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../images/KREW.png" alt="KREWfit Logo" class="logo">
+        </div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="../home/index.html">Home</a></li>
+                    <li>Application</li>
+                    <li><a href="../plans/index.html">Plans</a></li>
+                </ul>
+            </nav>
+        </header>
+        <form name="application" netlify>
+            <input type="hidden" name="form-name" value="application">
+            
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </p>
+            
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </p>
+            
+            <p>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+            </p>
+            
+            <p>
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age" required>
+            </p>
+            
+            <p>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+            
+            <p>
+                <label for="goals">Fitness Goals:</label>
+                <input type="text" id="goals" name="goals">
+            </p>
+            
+            <p>
+                <label for="experience">Fitness Experience:</label>
+                <input type="text" id="experience" name="experience">
+            </p>
+            
+            <p>
+                <label for="questions">Any Specific Questions or Concerns:</label>
+                <input type="text" id="questions" name="questions">
+            </p>
+
+            <p>
+                <label for="currentRoutine">Current Fitness Routine:</label>
+                <input type="text" id="currentRoutine" name="currentRoutine">
+            </p>
+            <p>
+                <label for="expectations">Expectations from Coaching:</label>
+                <input type="text" id="expectations" name="expectations">
+            </p>
+            <p>
+                <label for="injuries">Injuries or Limitations:</label>
+                <input type="text" id="injuries" name="injuries">
+            </p>
+            <p>
+                <label for="preference">Exercise Day Preference:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="days" value="Monday"> Monday</label>
+                    <label><input type="checkbox" name="days" value="Tuesday"> Tuesday</label>
+                    <label><input type="checkbox" name="days" value="Wednesday"> Wednesday</label>
+                    <label><input type="checkbox" name="days" value="Thursday"> Thursday</label>
+                    <label><input type="checkbox" name="days" value="Friday"> Friday</label>
+                    <label><input type="checkbox" name="days" value="Saturday"> Saturday</label>
+                    <label><input type="checkbox" name="days" value="Sunday"> Sunday</label>
+                </div>
+            </p>
+            <p>
+                <label for="startDate">When do you want to start?</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </p>
+            <p>
+                <label for="payment">Method of Payment:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="paymentMethod" value="PayPal"> PayPal (eyhong88@gmail.com)</label>
+                    <label><input type="radio" name="paymentMethod" value="Venmo"> Venmo (@eyhong88)</label>
+                    <label><input type="radio" name="paymentMethod" value="Other"> Other: <input type="text" name="otherPaymentMethod"></label>
+                </div>
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </form>
+        <div class="thank-you-message">
+            <p>Thank you for submitting your application!</p>
+        </div>
+    </div>
+    <script src="/scripts.js"></script>
+</body>
+</html>
