@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Training Packages</title>
+    <title>KREWfit Fitness Coach</title>
     <link rel="stylesheet" href="styles.css">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.paypal.com; img-src 'self' https://www.paypalobjects.com;">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.paypal.com; img-src 'self' https://www.paypalobjects.com;"> -->
 </head>
 <body>
     <div class="container">
@@ -25,57 +25,181 @@
             <h2>Digital Training Packages</h2>
         </div>
 
+        <!-- Basic Digital Package -->
         <div class="package" id="basicDigital">
             <h2>Basic Digital Package</h2>
             <p class="price">$125/month</p>
             <ul class="features">
-                <!-- Content will be inserted by JavaScript -->
+                <li>Custom workout program</li>
+                <li>Weekly check-ins</li>
             </ul>
+            <label for="basicDigitalQuantitySelect">Months:</label>
+            <select id="basicDigitalQuantitySelect" onchange="updateTotal('basicDigital', 125)">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+            </select>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="basicDigitalForm" onsubmit="return updateTotalAndSubmit('basicDigital', 125)">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="TXZ74RTQJCHBE" />
+                <input type="hidden" name="business" value="thekrewfit@gmail.com">
+                <input type="hidden" name="item_name" value="Basic Digital Package">
+                <input type="hidden" name="amount" id="basicDigitalAmount" value="125.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="quantity" id="basicDigitalQuantity" value="1">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
 
+
+        <!-- Standard Digital Package -->
         <div class="package" id="standardDigital">
             <h2>Standard Digital Package</h2>
             <p class="price">$225/month</p>
             <ul class="features">
-                <!-- Content will be inserted by JavaScript -->
+                <li>All features of Basic Digital Package</li>
+                <li>Custom nutrition plan</li>
+                <li>Exercise form checks</li>
             </ul>
+            <label for="standardDigitalQuantitySelect">Months:</label>
+            <select id="standardDigitalQuantitySelect" onchange="updateTotal('standardDigital', 225)">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+            </select>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="standardDigitalForm">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="business" value="YOUR_PAYPAL_BUSINESS_EMAIL">
+                <input type="hidden" name="item_name" value="Standard Digital Package">
+                <input type="hidden" name="amount" id="standardDigitalAmount" value="225.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="quantity" id="standardDigitalQuantity" value="1">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
 
+        <!-- Premium Digital Package -->
         <div class="package" id="premiumDigital">
             <h2>Premium Digital Package</h2>
             <p class="price">$325/month</p>
             <ul class="features">
-                <!-- Content will be inserted by JavaScript -->
+                <li>All features of Standard Digital Package</li>
+                <li>24/7 availability*</li>
+                <li>Supplement plan</li>
+                <li>Accountability and habit forming support</li>
             </ul>
+            <label for="premiumDigitalQuantitySelect">Months:</label>
+            <select id="premiumDigitalQuantitySelect" onchange="updateTotal('premiumDigital', 325)">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+            </select>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="premiumDigitalForm">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="business" value="YOUR_PAYPAL_BUSINESS_EMAIL">
+                <input type="hidden" name="item_name" value="Premium Digital Package">
+                <input type="hidden" name="amount" id="premiumDigitalAmount" value="325.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="quantity" id="premiumDigitalQuantity" value="1">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
 
         <div class="header">
             <h2>In-Person Training Packages</h2>
             <p>In-person training is available either at my gym or at a location of your choice within a 25-mile radius.</p>
         </div>
-
+        <!-- Basic In-Person Package -->
         <div class="package" id="basicInPerson">
             <h2>Basic In-Person Package</h2>
             <p class="price">$175/month</p>
             <ul class="features">
-                <!-- Content will be inserted by JavaScript -->
+                <li>Custom workout program</li>
+                <li>Weekly check-ins</li>
+                <li>One in-person session per week</li>
             </ul>
+            <label for="basicInPersonQuantitySelect">Months:</label>
+            <select id="basicInPersonQuantitySelect" onchange="updateTotal('basicInPerson', 175)">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+            </select>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="basicInPersonForm">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="business" value="YOUR_PAYPAL_BUSINESS_EMAIL">
+                <input type="hidden" name="item_name" value="Basic In-Person Package">
+                <input type="hidden" name="amount" id="basicInPersonAmount" value="175.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="quantity" id="basicInPersonQuantity" value="1">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
 
+        <!-- Standard In-Person Package -->
         <div class="package" id="standardInPerson">
             <h2>Standard In-Person Package</h2>
             <p class="price">$325/month</p>
             <ul class="features">
-                <!-- Content will be inserted by JavaScript -->
+                <li>All features of Basic In-Person Package</li>
+                <li>Custom nutrition plan</li>
+                <li>Exercise form checks</li>
+                <li>Two in-person sessions per week</li>
             </ul>
+            <label for="standardInPersonQuantitySelect">Months:</label>
+            <select id="standardInPersonQuantitySelect" onchange="updateTotal('standardInPerson', 325)">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+            </select>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="standardInPersonForm">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="business" value="YOUR_PAYPAL_BUSINESS_EMAIL">
+                <input type="hidden" name="item_name" value="Standard In-Person Package">
+                <input type="hidden" name="amount" id="standardInPersonAmount" value="325.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="quantity" id="standardInPersonQuantity" value="1">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
 
+        <!-- Premium In-Person Package -->
         <div class="package" id="premiumInPerson">
             <h2>Premium In-Person Package</h2>
             <p class="price">$475/month</p>
             <ul class="features">
-                <!-- Content will be inserted by JavaScript -->
+                <li>All features of Standard In-Person Package</li>
+                <li>24/7 availability</li>
+                <li>Supplement plan</li>
+                <li>Accountability and habit forming support</li>
+                <li>Three in-person sessions per week</li>
             </ul>
+            <label for="premiumInPersonQuantitySelect">Months:</label>
+            <select id="premiumInPersonQuantitySelect" onchange="updateTotal('premiumInPerson', 475)">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+            </select>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="premiumInPersonForm">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="business" value="YOUR_PAYPAL_BUSINESS_EMAIL">
+                <input type="hidden" name="item_name" value="Premium In-Person Package">
+                <input type="hidden" name="amount" id="premiumInPersonAmount" value="475.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="quantity" id="premiumInPersonQuantity" value="1">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
 
         <div class="discounts">
@@ -115,6 +239,25 @@
             <p>Eric Hong ("KREWfit") is not a Doctor or Registered Dietitian. The programs and advice provided are for educational purposes only and are not intended as medical advice. Please consult a physician or qualified healthcare professional for any health-related concerns.</p>
         </div>
     </div>
-    <script src="scripts.js"></script>
+    <script>
+        function updateTotal(packageId, basePrice) {
+            const quantitySelect = document.getElementById(`${packageId}QuantitySelect`);
+            const quantity = quantitySelect.value;
+            let discount = 0;
+
+            if (quantity == 3) discount = 5;
+            else if (quantity == 6) discount = 10;
+            else if (quantity == 12) discount = 15;
+
+            const totalPrice = basePrice * quantity * (1 - discount / 100);
+            document.getElementById(`${packageId}Amount`).value = totalPrice.toFixed(2);
+            document.getElementById(`${packageId}Quantity`).value = quantity;
+        }
+
+        function updateTotalAndSubmit(packageId, basePrice) {
+            updateTotal(packageId, basePrice);
+            return true;
+        }
+    </script>
 </body>
 </html>

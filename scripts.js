@@ -63,3 +63,32 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('standardInPerson').innerHTML += generatePayPalButton("ZWAC77KZXDPRC");
     document.getElementById('premiumInPerson').innerHTML += generatePayPalButton("EAWQZR7BQGJA2");
 });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     document.getElementById("basicDigitalQuantitySelect").addEventListener("change", function() {
+//         updateTotal('basicDigital', 125);
+//     });
+//     document.getElementById("basicDigitalForm").addEventListener("submit", function() {
+//         return updateTotalAndSubmit('basicDigital', 125);
+//     });
+// });
+
+// function updateTotal(packageId, basePrice) {
+//     const quantitySelect = document.getElementById(`${packageId}QuantitySelect`);
+//     const quantity = quantitySelect.value;
+//     let discount = 0;
+
+//     if (quantity == 3) discount = 5;
+//     else if (quantity == 6) discount = 10;
+//     else if (quantity == 12) discount = 15;
+
+//     const totalPrice = basePrice * quantity * (1 - discount / 100);
+//     document.getElementById(`${packageId}Amount`).value = totalPrice.toFixed(2);
+//     document.getElementById(`${packageId}Quantity`).value = quantity;
+//     console.log(`Updated ${packageId}Amount to ${totalPrice.toFixed(2)} and ${packageId}Quantity to ${quantity}`);
+// }
+
+// function updateTotalAndSubmit(packageId, basePrice) {
+//     updateTotal(packageId, basePrice);
+//     return true;
+// }
