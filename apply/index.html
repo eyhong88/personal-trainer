@@ -20,7 +20,7 @@
                 </ul>
             </nav>
         </header>
-        <form name="application" method="POST" netlify>
+        <form name="application" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="application">
             
             <p>
@@ -106,10 +106,8 @@
             <p>
                 <button type="submit">Submit</button>
             </p>
+            <p class="thank-you-message">Thank you for submitting your application!</p>
         </form>
-        <div class="thank-you-message">
-            <p>Thank you for submitting your application!</p>
-        </div>
     </div>
     <script src="/scripts.js"></script>
 </body>
