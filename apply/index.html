@@ -21,6 +21,7 @@
             </nav>
         </header>
         <form name="application" method="POST" data-netlify="true">
+            <input type="hidden" name="redirect" value="/plans/index.html">
             
             <p>
                 <label for="name">Name:</label>
@@ -97,7 +98,7 @@
             <p>
                 <label for="payment">Method of Payment:</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="paymentMethod" value="PayPal"> PayPal (eyhong88@gmail.com)</label>
+                    <label><input type="radio" name="paymentMethod" value="PayPal" required> PayPal (eyhong88@gmail.com)</label>
                     <label><input type="radio" name="paymentMethod" value="Venmo"> Venmo (@eyhong88)</label>
                     <label><input type="radio" name="paymentMethod" value="Other"> Other: <input type="text" name="otherPaymentMethod"></label>
                 </div>
