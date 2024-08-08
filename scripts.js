@@ -63,14 +63,3 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('standardInPerson').innerHTML += generatePayPalButton("ZWAC77KZXDPRC");
     document.getElementById('premiumInPerson').innerHTML += generatePayPalButton("EAWQZR7BQGJA2");
 });
-
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const form = event.target;
-    const thankYouMessage = document.querySelector('.thank-you-message');
-    thankYouMessage.style.display = 'block';
-    setTimeout(() => {
-        form.submit();
-        window.location.href = '../plans/index.html';
-    }, 2000);
-});
