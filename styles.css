@@ -193,9 +193,24 @@ input[type="text"], input[type="email"], input[type="date"] {
     margin-right: 10px;
 }
 
-.thank-you-message {
-    display: none;
+.social-media {
     text-align: center;
     margin-top: 20px;
-    color: green;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #e67e22;
+}
+
+.social-icon i {
+    display: inline-block;
+    font-size: 24px;
 }
