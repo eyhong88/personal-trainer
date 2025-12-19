@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Training Packages</title>
+    <title>Coaching Plans - KREWfit</title>
     <link rel="stylesheet" href="../styles.css">
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.paypal.com; img-src 'self' https://www.paypalobjects.com;"> -->
 </head>
 <body>
     <div class="container">
         <div class="banner">
-            <p>If you have not already, please make sure you submit an <a href="../apply/index.html">application</a> before you select a plan</p>
+            <h1>Coaching Plans</h1>
         </div>
         <div class="header">
-            <a href="../home/index.html">
-                <img src="../images/KREW.png" alt="KREWfit Logo" class="logo">
-            </a>
-        </div>
-        <header>
+            <img src="../images/KREW.png" alt="KREWfit Logo" class="logo">
             <nav>
                 <ul>
                     <li><a href="../home/index.html">Home</a></li>
                     <li><a href="../apply/index.html">Application</a></li>
-                    <li>Plans</li>
+                    <li><a href="./index.html">Plans</a></li>
                 </ul>
             </nav>
-        </header>
-
-        <div class="header">
-            <h2>Digital Training Packages</h2>
         </div>
+
+        <div class="steps-container" style="display: flex; align-items: center; justify-content: flex-start; gap: 20px; padding-left: 20px;">
+            <span style="color: red; font-size: 4rem; font-weight: bold; min-width: 60px; flex-shrink: 0;">!</span>
+            <p style="margin: 0; flex-grow: 1; text-align: center;"><strong>Before selecting a plan, please make sure you've submitted an <a href="../apply/index.html">application</a></strong></p>
+        </div>
+
+        <div style="padding: 40px 20px;">
+            <h2 style="text-align: center; margin: 40px 0 30px; font-size: 1.8rem; color: #2c3e50;">Digital Training Packages</h2>
 
         <div class="package" id="basicDigital">
             <h2>Basic Digital Package</h2>
-            <p class="price">$125/month</p>
+            <div class="price">$125<span style="font-size: 1rem;color:#888;">/month</span></div>
             <ul class="features">
                 <!-- Content will be inserted by JavaScript -->
             </ul>
@@ -41,7 +41,7 @@
 
         <div class="package" id="standardDigital">
             <h2>Standard Digital Package</h2>
-            <p class="price">$225/month</p>
+            <div class="price">$225<span style="font-size: 1rem;color:#888;">/month</span></div>
             <ul class="features">
                 <!-- Content will be inserted by JavaScript -->
             </ul>
@@ -49,20 +49,18 @@
 
         <div class="package" id="premiumDigital">
             <h2>Premium Digital Package</h2>
-            <p class="price">$325/month</p>
+            <div class="price">$325<span style="font-size: 1rem;color:#888;">/month</span></div>
             <ul class="features">
                 <!-- Content will be inserted by JavaScript -->
             </ul>
         </div>
 
-        <div class="header">
-            <h2>In-Person Training Packages</h2>
-            <p>In-person training is available either at my gym or at a location of your choice within a 25-mile radius.</p>
-        </div>
+        <h2 style="text-align: center; margin: 40px 0 30px; font-size: 1.8rem; color: #2c3e50;">In-Person Training Packages</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: #555;">In-person training is available either at my gym or at a location of your choice within a 25-mile radius.</p>
 
         <div class="package" id="basicInPerson">
             <h2>Basic In-Person Package</h2>
-            <p class="price">$175/month</p>
+            <div class="price">$175<span style="font-size: 1rem;color:#888;">/month</span></div>
             <ul class="features">
                 <!-- Content will be inserted by JavaScript -->
             </ul>
@@ -70,7 +68,7 @@
 
         <div class="package" id="standardInPerson">
             <h2>Standard In-Person Package</h2>
-            <p class="price">$325/month</p>
+            <div class="price">$325<span style="font-size: 1rem;color:#888;">/month</span></div>
             <ul class="features">
                 <!-- Content will be inserted by JavaScript -->
             </ul>
@@ -78,53 +76,49 @@
 
         <div class="package" id="premiumInPerson">
             <h2>Premium In-Person Package</h2>
-            <p class="price">$475/month</p>
+            <div class="price">$475<span style="font-size: 1rem;color:#888;">/month</span></div>
             <ul class="features">
                 <!-- Content will be inserted by JavaScript -->
             </ul>
         </div>
 
-        <div class="header">
-            <h2>Custom Packages</h2>
-        </div>
+        <h2 style="text-align: center; margin: 40px 0 30px; font-size: 1.8rem; color: #2c3e50;">Custom Packages</h2>
 
         <div class="package" id="customPackage">
             <h2>Custom Package</h2>
-            <p class="price">$--</p>
+            <p class="price">Let's Talk</p>
             <ul class="features">
                 <li>Options and pricing to be discussed</li>
                 <li>Please contact me for custom packages: thekrewfit@gmail.com</li>
             </ul>
         </div>
 
-        <div class="discounts">
-            <p><strong>Discounts:</strong></p>
-            <p>3-Month Commitment: 5% off</p>
-            <p>6-Month Commitment: 10% off</p>
-            <p>12-Month Commitment: 15% off</p>
+        <div class="discounts" style="padding: 30px 20px; background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f1 100%); border-radius: 12px; margin: 30px 20px;">
+            <p><strong style="font-size: 1.1rem; color: #2c3e50;">Discounts Available:</strong></p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="padding: 8px 0;"><strong>3-Month Commitment:</strong> 5% off</li>
+                <li style="padding: 8px 0;"><strong>6-Month Commitment:</strong> 10% off</li>
+                <li style="padding: 8px 0;"><strong>12-Month Commitment:</strong> 15% off</li>
+            </ul>
         </div>
 
-        <div class="referral">
-            <p><strong>Referral Bonus:</strong> $25 off your next month for each new client you refer.</p>
+        <div class="referral" style="padding: 30px 20px; background: linear-gradient(135deg, #fff8f0 0%, #ffe8d6 100%); border-radius: 12px; margin: 30px 20px; border-left: 4px solid #e67e22;">
+            <p><strong style="font-size: 1.1rem; color: #2c3e50;">Referral Bonus:</strong> $25 off your next month for each new client you refer.</p>
         </div>
 
         <div class="client-transformation">
             <h2>Client Transformations</h2>
             <div class="transformation-images">
-                <img src="/images/before_twin.jpg" alt="Client Transformation 1">
-                <img src="/images/after_twin.jpg" alt="Client Transformation 2">
+                <img src="../images/before_twin.jpg" alt="Client Transformation 1">
+                <img src="../images/after_twin.jpg" alt="Client Transformation 2">
             </div>
         </div>
 
         <div class="david-client-transformation">
             <div class="transformation-images">
-                <img src="/images/david_after.png" alt="David Transformation">
+                <img src="../images/david_after.png" alt="David Transformation">
             </div>
         </div>
-
-        <div class="footer">
-            <p>Contact us to get started with your personalized training plan!</p>
-            <p>Contact: thekrewfit@gmail.com</p>
         </div>
 
         <div class="disclaimer">
@@ -133,7 +127,13 @@
             <p>The contents of the programs are confidential and are intended solely for the individual to whom they are addressed. Any distribution, copying, or sharing of the program is strictly prohibited.</p>
             <p>Eric Hong ("KREWfit") is not a Doctor or Registered Dietitian. The programs and advice provided are for educational purposes only and are not intended as medical advice. Please consult a physician or qualified healthcare professional for any health-related concerns.</p>
         </div>
+
+        <div class="footer">
+            <p>Contact us to get started with your personalized training plan!</p>
+            <p>Email: thekrewfit@gmail.com</p>
+            <p>&copy; 2024 KREWfit Coaching. All rights reserved.</p>
+        </div>
     </div>
-    <script src="/scripts.js"></script>
+    <script src="../scripts.js"></script>
 </body>
 </html>
